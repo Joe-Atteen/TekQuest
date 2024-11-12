@@ -7,11 +7,11 @@ async function Home() {
   const albums = await response.json();
 
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-black sm:p-20">
+    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 sm:p-20">
       {albums.map((album: { id: number; title: string }) => (
         <div key={album.id} className="text-center">
-          <h2 className="text-2xl font-bold">{album.title}</h2>
-          <p>{album.id}</p>
+          <h2 className="h1-bold font-gellixItalic">{album.title}</h2>
+          <p className="font-gellixMedium">{album.id}</p>
         </div>
       ))}
     </div>
