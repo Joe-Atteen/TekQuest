@@ -28,7 +28,7 @@
   "files.exclude": {
     "**/.vscode": true,
     "**/node_modules": true,
-    "**/.env.local": true,
+    "**/.env.local": false,
     "**/.next": true,
     "**/next-env.d.ts": true
   }
