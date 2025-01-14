@@ -1,11 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
-import ROUTES from "@/constants/routes";
-
 import NavLinks from "./navbar/NavLinks";
-import { Button } from "../ui/button";
 
 const LeftSidebar = () => {
   return (
@@ -15,7 +10,7 @@ const LeftSidebar = () => {
       </div>
 
       <div className="flex flex-col gap-3">
-        <Button
+        {/* <Button
           className="body-medium btn-secondary min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none"
           asChild
         >
@@ -31,7 +26,7 @@ const LeftSidebar = () => {
               Login
             </span>
           </Link>
-        </Button>
+        </Button> */}
 
         {/* <Button
           className="body-medium light-border-2 btn-tertiary text-dark400_light900 min-h-[41px] w-full rounded-lg border px-4 py-3 shadow-none"
