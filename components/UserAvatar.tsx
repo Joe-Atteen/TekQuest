@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 
 import { Avatar, AvatarFallback } from "./ui/avatar";
 
@@ -17,9 +18,15 @@ interface Props {
   name: string;
   imageUrl?: string | null;
   className?: string;
+  fallbackClassName?: string;
 }
 
-const UserAvatar = async ({ name, imageUrl, className = "h-9 w-9" }: Props) => {
+const UserAvatar = async ({
+  name,
+  imageUrl,
+  className = "h-9 w-9",
+  fallbackClassName,
+}: Props) => {
   const session = await auth();
   const userId = session?.user?.id;
 
@@ -44,7 +51,12 @@ const UserAvatar = async ({ name, imageUrl, className = "h-9 w-9" }: Props) => {
               quality={100}
             />
           ) : (
-            <AvatarFallback className="primary-gradient font-bold tracking-wider text-white">
+            <AvatarFallback
+              className={cn(
+                "primary-gradient font-bold tracking-wider text-white",
+                fallbackClassName
+              )}
+            >
               {initials}
             </AvatarFallback>
           )}
