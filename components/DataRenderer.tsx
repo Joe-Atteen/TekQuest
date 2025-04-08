@@ -45,24 +45,22 @@ const StateSkeleton = ({
   button,
 }: StateSkeletonProps) => (
   <div className="mt-16 flex w-full flex-col items-center justify-center sm:mt-24">
-    <>
-      <Image
-        src={image.dark}
-        alt={image.alt}
-        width={270}
-        height={200}
-        className="hidden object-contain dark:block"
-      />
-      <Image
-        src={image.light}
-        alt={image.alt}
-        width={270}
-        height={200}
-        className="block object-contain dark:hidden"
-      />
-    </>
+    <Image
+      src={image.dark}
+      alt={image.alt}
+      width={270}
+      height={200}
+      className="hidden object-contain dark:block"
+    />
+    <Image
+      src={image.light}
+      alt={image.alt}
+      width={270}
+      height={200}
+      className="block object-contain dark:hidden"
+    />
 
-    <h2 className="h2-bold text-dark200_light900 mt-8">{title}</h2>
+    <h2 className="h2-bold text-dark200_light900 mt-8 text-center">{title}</h2>
     <p className="body-regular text-dark500_light700 my-3.5 max-w-md text-center">
       {message}
     </p>
@@ -91,7 +89,7 @@ const DataRenderer = <T,>({
           dark: "/images/dark-error.png",
           alt: "Error state illustration",
         }}
-        title={error?.message || DEFAULT_ERROR.title}
+        title={error?.message ?? DEFAULT_ERROR.title}
         message={
           error?.details
             ? JSON.stringify(error.details, null, 2)
