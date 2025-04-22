@@ -9,20 +9,17 @@ import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
 
 const filters = [
-  { name: "React", value: "react" },
-  { name: "JavaScript", value: "javascript" },
-
-  // { name: "Newest", value: "newest" },
-  // { name: "Popular", value: "popular" },
-  // { name: "Unanswered", value: "unanswered" },
-  // { name: "Recommeded", value: "recommended" },
+  { name: "Newest", value: "newest" },
+  { name: "Popular", value: "popular" },
+  { name: "Unanswered", value: "unanswered" },
+  { name: "Recommeded", value: "recommended" },
 ];
 
 const HomeFilter = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const filterParams = searchParams.get("filter");
-  const [active, setActive] = useState(filterParams || "");
+  const [active, setActive] = useState(filterParams ?? "");
 
   const handleTypeClick = (filter: string) => {
     let newUrl = "";
