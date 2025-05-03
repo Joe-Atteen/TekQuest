@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 import { auth } from "@/auth";
+import GlobalSearch from "@/components/search/GlobalSearch";
 import { Button } from "@/components/ui/button";
 import UserAvatar from "@/components/UserAvatar";
 import ROUTES from "@/constants/routes";
@@ -28,7 +29,7 @@ const Navbar = async () => {
         </p>
       </Link>
 
-      <p className="hidden md:flex">Global Search</p>
+      <GlobalSearch />
 
       <div className="flex-between gap-4">
         <Theme />

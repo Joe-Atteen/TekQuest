@@ -4,8 +4,8 @@ const Loading = () => {
   return (
     <>
       <section className="flex w-full flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
-        <h1 className="h1-bold text-dark100_light900">All QUestions</h1>
-        <Skeleton className="h-14 w-32" />
+        <h1 className="h1-bold text-dark100_light900">All Questions</h1>
+        <Skeleton className="h-12 w-32" />
       </section>
 
       <section className="mt-11">
